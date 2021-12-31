@@ -1,0 +1,66 @@
+{
+  // This is an alias to @tsconfig/node12: https://github.com/tsconfig/bases
+  "extends": "ts-node/node12/tsconfig.json",
+
+  // Most ts-node options can be specified here using their programmatic names.
+  "ts-node": {
+    // It is faster to skip typechecking.
+    // Remove if you want ts-node to do typechecking.
+    "transpileOnly": true,
+
+    "files": true,
+
+    "compilerOptions": {
+      "jsx": "react",
+      "allowJs": true,
+      "alwaysStrict": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "lib": ["dom", "esnext"],
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "noEmit": true,
+      "noImplicitAny": true,
+      "removeComments": true,
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "strict": true,
+      "strictNullChecks": true,
+      "target": "es6",
+      "baseUrl": "./src",
+      "paths": {
+        "@assets/*": ["./client/assets/*"],
+        "@client/*": ["./client/domain/*"],
+        "@server/*": ["./server/domain/*"]
+      }
+    },
+  },
+  "compilerOptions": {
+    "jsx": "react",
+    "allowJs": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["dom", "esnext"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "es6",
+    "baseUrl": "./src",
+    "paths": {
+      "@assets/*": ["./client/assets/*"],
+      "@client/*": ["./client/domain/*"],
+      "@server/*": ["./server/domain/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
