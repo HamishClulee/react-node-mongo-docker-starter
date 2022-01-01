@@ -1,10 +1,10 @@
 version: "3"
 services:
-  daily:
-    container_name: daily
-    image: daily:latest
+  boilerplate:
+    container_name: boilerplate
+    image: boilerplate:latest
     environment:
-      - MONGO_URI=mongodb://mongo:27017/daily
+      - MONGO_URI=mongodb://mongo:27017/boilerplate
     restart: always
     build: .
     ports:
@@ -17,6 +17,6 @@ services:
     container_name: mongo
     image: mongo
     volumes:
-      - ./data:/data/daily
+      - ./data:/data/boilerplate
     ports:
       - '27018:27017'

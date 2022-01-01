@@ -29,7 +29,7 @@ const App = () => {
     className: "App"
   }, /* @__PURE__ */ React.createElement("header", {
     className: "App-header"
-  }, /* @__PURE__ */ React.createElement("div", null, "All The Books:", " ", books.map(({author, title}, index) => /* @__PURE__ */ React.createElement("div", {
+  }, /* @__PURE__ */ React.createElement("div", null, "Books:", " ", books.map(({author, title}, index) => /* @__PURE__ */ React.createElement("div", {
     key: index
   }, `title: ${title} - author: ${author}`))))));
 };

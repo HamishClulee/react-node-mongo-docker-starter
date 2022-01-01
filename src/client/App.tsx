@@ -37,7 +37,7 @@ const App = () => {
       <div className="App">
         <header className="App-header">
           <div>
-            All The Books:{' '}
+            Books:{' '}
             {books.map(({ author, title }, index) => (
               <div key={index}>{`title: ${title} - author: ${author}`}</div>
             ))}

@@ -3,9 +3,11 @@ FROM node:14-alpine
 
 WORKDIR /app
 
-COPY package.json yarn.lock dist ./
+COPY package.json yarn.lock ./
 
-RUN yarn --pure-lockfile --non-interactive --production
+RUN yarn --frozen-lockfile --non-interactive --production
+
+COPY dist ./
 
 EXPOSE 7000
 
